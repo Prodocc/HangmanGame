@@ -1,0 +1,734 @@
+[gd_scene load_steps=16 format=3 uid="uid://d1lusy6qry7pg"]
+
+[ext_resource type="Script" path="res://Game.gd" id="1_clkuo"]
+[ext_resource type="ButtonGroup" uid="uid://cwel3tbmxjrdo" path="res://new_button_group.tres" id="2_lgu1v"]
+[ext_resource type="FontFile" uid="uid://6ahxcqsvhmye" path="res://Gloria_Hallelujah/GloriaHallelujah-Regular.ttf" id="3_q6j50"]
+[ext_resource type="Texture2D" uid="uid://chhrbyr01ajm7" path="res://Images/chopping_block.jpg" id="4_s0la3"]
+[ext_resource type="Texture2D" uid="uid://d364yk45gigvm" path="res://Images/head.jpg" id="5_jg7ha"]
+[ext_resource type="Texture2D" uid="uid://cq13c07fr5dka" path="res://Images/body.jpg" id="6_s327c"]
+[ext_resource type="Texture2D" uid="uid://bp7qbirj4fgm0" path="res://Images/left_hand.jpg" id="7_ihnby"]
+[ext_resource type="Texture2D" uid="uid://bge4x3ytrieop" path="res://Images/right_hand.jpg" id="8_4i8ea"]
+[ext_resource type="Texture2D" uid="uid://cc4d4xvhmdc4b" path="res://Images/left_leg.jpg" id="9_emjhr"]
+[ext_resource type="Texture2D" uid="uid://0wy3dj0ht0cm" path="res://Images/death_eyes.jpg" id="10_e18hj"]
+[ext_resource type="AudioStream" uid="uid://baxdom4swh5jq" path="res://Audio/1554289085_drawing-lines-using-pencil_mjavrbe_.wav" id="11_ht0hr"]
+[ext_resource type="AudioStream" uid="uid://c4vkfo3udfi15" path="res://Audio/neck_snap-Vladimir-719669812.wav" id="12_jif2w"]
+[ext_resource type="AudioStream" uid="uid://cr6x28fmogug2" path="res://Audio/mixkit-male-voice-cheer-2010.wav" id="13_i0d8y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slpp5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5sirb"]
+
+[node name="Game" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Node2D" type="Node2D" parent="ColorRect"]
+script = ExtResource("1_clkuo")
+group = ExtResource("2_lgu1v")
+
+[node name="TestLabel" type="Label" parent="ColorRect/Node2D"]
+visible = false
+offset_left = 148.0
+offset_top = 113.0
+offset_right = 607.0
+offset_bottom = 197.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 40
+text = "\"A\" Button was pressed"
+horizontal_alignment = 1
+
+[node name="WordLabel" type="Label" parent="ColorRect/Node2D"]
+offset_left = 126.0
+offset_top = 211.0
+offset_right = 585.0
+offset_bottom = 295.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+text = "Word_Label_Here"
+horizontal_alignment = 1
+
+[node name="AButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 50.0
+offset_top = 350.0
+offset_right = 147.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "A"
+
+[node name="BButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 120.0
+offset_top = 350.0
+offset_right = 217.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "B"
+
+[node name="CButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 190.0
+offset_top = 350.0
+offset_right = 287.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "C"
+
+[node name="DButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 260.0
+offset_top = 350.0
+offset_right = 357.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "D"
+
+[node name="EButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 330.0
+offset_top = 350.0
+offset_right = 427.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "E"
+
+[node name="FButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 400.0
+offset_top = 350.0
+offset_right = 497.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "F"
+
+[node name="GButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 470.0
+offset_top = 350.0
+offset_right = 567.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "G"
+
+[node name="HButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 540.0
+offset_top = 350.0
+offset_right = 637.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "H"
+
+[node name="IButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 610.0
+offset_top = 350.0
+offset_right = 707.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "I"
+
+[node name="JButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 50.0
+offset_top = 425.0
+offset_right = 147.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "J"
+
+[node name="KButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 120.0
+offset_top = 425.0
+offset_right = 217.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "K"
+
+[node name="LButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 190.0
+offset_top = 425.0
+offset_right = 287.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "L"
+
+[node name="MButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 260.0
+offset_top = 425.0
+offset_right = 357.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "M"
+
+[node name="NButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 330.0
+offset_top = 425.0
+offset_right = 427.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "N"
+
+[node name="OButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 400.0
+offset_top = 425.0
+offset_right = 497.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "O"
+
+[node name="PButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 470.0
+offset_top = 425.0
+offset_right = 567.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "P"
+
+[node name="QButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 540.0
+offset_top = 425.0
+offset_right = 637.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "Q"
+
+[node name="RButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 610.0
+offset_top = 425.0
+offset_right = 707.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "R"
+
+[node name="SButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 50.0
+offset_top = 500.0
+offset_right = 147.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "S"
+
+[node name="TButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 120.0
+offset_top = 500.0
+offset_right = 217.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "T"
+
+[node name="UButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 190.0
+offset_top = 500.0
+offset_right = 287.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "U"
+
+[node name="VButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 260.0
+offset_top = 500.0
+offset_right = 357.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "V"
+
+[node name="WButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 330.0
+offset_top = 500.0
+offset_right = 427.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "W"
+
+[node name="XButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 400.0
+offset_top = 500.0
+offset_right = 497.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "X"
+
+[node name="YButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 470.0
+offset_top = 500.0
+offset_right = 567.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "Y"
+
+[node name="ZButton" type="Button" parent="ColorRect/Node2D"]
+offset_left = 540.0
+offset_top = 500.0
+offset_right = 637.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_slpp5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slpp5")
+toggle_mode = true
+button_group = ExtResource("2_lgu1v")
+text = "Z"
+
+[node name="Restart" type="Button" parent="ColorRect/Node2D"]
+offset_left = 252.0
+offset_top = 100.0
+offset_right = 454.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5sirb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5sirb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5sirb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5sirb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5sirb")
+text = "Restart"
+
+[node name="RoundResult" type="Button" parent="ColorRect/Node2D"]
+offset_left = 165.0
+offset_top = 4.0
+offset_right = 531.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_q6j50")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5sirb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5sirb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5sirb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5sirb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5sirb")
+text = "Round_Result_Here"
+
+[node name="ChoppingBlockSprite" type="Sprite2D" parent="ColorRect/Node2D"]
+position = Vector2(916.5, 327)
+texture = ExtResource("4_s0la3")
+
+[node name="HeadSprite" type="Sprite2D" parent="ColorRect/Node2D"]
+visible = false
+position = Vector2(916.5, 327)
+texture = ExtResource("5_jg7ha")
+
+[node name="BodySprite" type="Sprite2D" parent="ColorRect/Node2D"]
+visible = false
+position = Vector2(916.5, 327)
+texture = ExtResource("6_s327c")
+
+[node name="LeftHandSprite" type="Sprite2D" parent="ColorRect/Node2D"]
+visible = false
+position = Vector2(916.5, 327)
+texture = ExtResource("7_ihnby")
+
+[node name="RightHandSprite" type="Sprite2D" parent="ColorRect/Node2D"]
+visible = false
+position = Vector2(916.5, 327)
+texture = ExtResource("8_4i8ea")
+
+[node name="LeftLegSprite" type="Sprite2D" parent="ColorRect/Node2D"]
+visible = false
+position = Vector2(916.5, 327)
+texture = ExtResource("9_emjhr")
+
+[node name="DeathSprite" type="Sprite2D" parent="ColorRect/Node2D"]
+visible = false
+position = Vector2(916.5, 327)
+texture = ExtResource("10_e18hj")
+
+[node name="PencilSound" type="AudioStreamPlayer2D" parent="ColorRect/Node2D"]
+stream = ExtResource("11_ht0hr")
+
+[node name="NeckSnapSound" type="AudioStreamPlayer2D" parent="ColorRect/Node2D"]
+stream = ExtResource("12_jif2w")
+
+[node name="WinSound" type="AudioStreamPlayer2D" parent="ColorRect/Node2D"]
+stream = ExtResource("13_i0d8y")
+
+[connection signal="pressed" from="ColorRect/Node2D/Restart" to="ColorRect/Node2D" method="_on_restart_pressed"]

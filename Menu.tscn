@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://ba2xre8h4otfd"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_pfoxq"]
+[ext_resource type="AudioStream" uid="uid://8kdckh3pwu4s" path="res://Audio/581415__peanut_shaman__western-bass.wav" id="2_hdmg4"]
+[ext_resource type="FontFile" uid="uid://6ahxcqsvhmye" path="res://Gloria_Hallelujah/GloriaHallelujah-Regular.ttf" id="2_yj0li"]
+[ext_resource type="Texture2D" uid="uid://bwjw82ldysmwl" path="res://Images/output-onlinepngtools.png" id="5_2vwrp"]
+[ext_resource type="Texture2D" uid="uid://bnauxbm0kwfwu" path="res://Images/dessin-arbre-facile-1-e1632814588227.jpg" id="5_p1feo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k22xu"]
+
+[node name="Control" type="Node"]
+script = ExtResource("1_pfoxq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WesternSound" type="AudioStreamPlayer2D" parent="ColorRect"]
+stream = ExtResource("2_hdmg4")
+autoplay = true
+
+[node name="Label" type="Label" parent="ColorRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 120.0
+offset_top = -25.0
+offset_right = 564.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_yj0li")
+theme_override_font_sizes/font_size = 100
+text = "Hangman"
+
+[node name="MainSprite" type="Sprite2D" parent="ColorRect/Label"]
+show_behind_parent = true
+position = Vector2(457, 349)
+texture = ExtResource("5_p1feo")
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 200.0
+offset_right = 393.0
+offset_bottom = 300.0
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("2_yj0li")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k22xu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k22xu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k22xu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_k22xu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k22xu")
+text = "Start"
+
+[node name="TumbleWeedSprite" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1256, 562)
+texture = ExtResource("5_2vwrp")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
